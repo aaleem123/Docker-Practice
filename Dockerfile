@@ -1,12 +1,12 @@
 FROM node:20-alpine 
 
-RUN mkdir -p /home/js-app
+RUN mkdir -p /home/app
 
-COPY ./app /home/js-app
+COPY . /home/app
 
-WORKDIR /home/js-app
+WORKDIR /home/app
 
 RUN npm install
 
-CMD ["node", "serveer.js"]
+CMD ["node", "server.js"]
 
