@@ -15,7 +15,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
     ports: 
       - "27017:27017"
-    volume: 
+    volumes: 
       - mynewdb:/data/db
 
   mongo_express:
@@ -31,6 +31,6 @@ services:
     depends_on:
       - mongo
 
-volume: 
+volumes: 
   mynewdb:
     
